@@ -1,0 +1,15 @@
+name: SkyDrop
+version: '${project.version}'
+main: net.aetherion.skydrop.SkyDropPlugin
+api-version: '26.1'
+author: Aetherion
+description: Random items fall from the sky inside a selected area at a set interval.
+commands:
+  skydrop:
+    description: SkyDrop main command
+    aliases: [skydrops, sdrop]
+    usage: /skydrop help
+permissions:
+  skydrop.admin:
+    description: Allows using all SkyDrop commands and the selection wand
+    default: op

@@ -1,0 +1,44 @@
+# ================================================================= #
+#                    SkyDrop - Aetherion Style                      #
+# ================================================================= #
+# Colors: &a, &l ... and hex &#RRGGBB are supported.
+# Zones themselves are stored in zones.yml (managed by commands).
+
+settings:
+  # Items glow so players can spot them easily
+  glow-items: true
+  # Spawn a small particle effect where each item starts falling
+  particles: true
+  # Sound played at the zone center on every drop (use a key like "entity.experience_orb.pickup", or "" to disable)
+  drop-sound: "entity.experience_orb.pickup"
+  # Skip a drop when no player is in the zone's world
+  require-players-in-world: true
+  # Announce every drop to the players in the zone's world
+  announce: true
+
+messages:
+  prefix: "&8&l« &#8A2BFF&l✦ &#FF55FF&lSKYDROP &#8A2BFF&l✦ &8&l» &r"
+  no-permission: "&#FF5555&l✖ &#D7B3FFYou do not have permission."
+  player-only: "&#FF5555&l✖ &#D7B3FFOnly players can use this."
+  unknown-zone: "&#FF5555&l✖ &#D7B3FFZone &#FFD700{zone} &#D7B3FFdoes not exist."
+  zone-exists: "&#FF5555&l✖ &#D7B3FFZone &#FFD700{zone} &#D7B3FFalready exists."
+  bad-number: "&#FF5555&l✖ &#FFD700{value} &#D7B3FFis not a valid number (must be 1 or more)."
+  bad-name: "&#FF5555&l✖ &#D7B3FFZone name may only use letters, numbers, - and _."
+  bad-material: "&#FF5555&l✖ &#FFD700{value} &#D7B3FFis not a valid item."
+  no-selection: "&#FF5555&l✖ &#D7B3FFSelect both corners first (wand: left click = pos1, right click = pos2)."
+  different-worlds: "&#FF5555&l✖ &#D7B3FFBoth corners must be in the same world."
+  wand-given: "&#55FF55&l✔ &#D7B3FFYou got the &#FF55FFSkyDrop Wand&#D7B3FF. Left click = pos1, right click = pos2."
+  pos1-set: "&#55FF55&l✔ &#D7B3FFPosition 1 set at &#55FFFF{x}, {y}, {z}"
+  pos2-set: "&#55FF55&l✔ &#D7B3FFPosition 2 set at &#55FFFF{x}, {y}, {z}"
+  created: "&#55FF55&l✔ &#D7B3FFZone &#FF55FF{zone} &#D7B3FFcreated &8(&#55FFFF{size} blocks&8, &#55FFFFevery {interval}s&8). &#D7B3FFNow add items with &#55FFFF/skydrop additem {zone} <item>"
+  deleted: "&#55FF55&l✔ &#D7B3FFZone &#FF55FF{zone} &#D7B3FFdeleted."
+  item-added: "&#55FF55&l✔ &#D7B3FFAdded &#FF55FF{item} &8({min}-{max}) &#D7B3FFto zone &#FF55FF{zone}&#D7B3FF."
+  item-removed: "&#55FF55&l✔ &#D7B3FFRemoved &#FF55FF{item} &#D7B3FFfrom zone &#FF55FF{zone}&#D7B3FF."
+  item-not-found: "&#FF5555&l✖ &#FFD700{item} &#D7B3FFis not in that zone."
+  updated: "&#55FF55&l✔ &#D7B3FFZone &#FF55FF{zone} &#D7B3FFupdated."
+  started: "&#55FF55&l✔ &#D7B3FFZone &#FF55FF{zone} &#D7B3FFstarted."
+  stopped: "&#FFD700&l⚠ &#D7B3FFZone &#FF55FF{zone} &#D7B3FFstopped."
+  no-items: "&#FF5555&l✖ &#D7B3FFZone &#FFD700{zone} &#D7B3FFhas no items yet. Use &#55FFFF/skydrop additem"
+  reloaded: "&#55FF55&l✔ &#D7B3FFSkyDrop reloaded."
+  # {zone} {count} {x} {y} {z} = zone center
+  drop-announce: "&#8A2BFF&l⚡ &#D7B3FFLoot is falling from the sky at &#FF55FF&l{zone} &8(&#55FFFF{x}, {y}, {z}&8) &#8A2BFF&l⚡ &#FFD700&lFirst come, first served!"
