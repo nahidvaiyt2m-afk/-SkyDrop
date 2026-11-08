@@ -1,0 +1,36 @@
+
+name: Build SkyDrop
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Java 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: maven
+
+      - name: Build SkyDrop
+        run: mvn -f SkyDrop/pom.xml --batch-mode clean package
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: SkyDrop-Paper-26.1
+          path: SkyDrop/target/SkyDrop-1.0.0.jar
+          if-no-files-found: error
+          retention-days: 14
